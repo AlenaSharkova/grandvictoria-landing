@@ -2,7 +2,7 @@
   <div class="body">
     <header>
       <div class="headerBlock">
-        <img class="header__logo" src="@/assets/logo.png">    
+        <img class="header__logo" src="@/assets/logo.png">
         <nav class="header__nav">
           <li class="nav__item">
             <a href="#home">Главная</a>
@@ -32,7 +32,7 @@
           </li>
           <li class="nav__item">
             <a href="#news">Новости</a>
-            </li>
+          </li>
         </nav>
         <div class="header__contacts">
           <div class="contacts__title">Отдел продаж:</div>
@@ -65,7 +65,7 @@
         <ul class="mainTop__list">
           <li class="mainTop__item">
             <a href="#">Офисы</a>
-            </li>
+          </li>
           <li class="mainTop__item">
             <a href="#">Паркинги</a>
           </li>
@@ -74,8 +74,8 @@
           </li>
         </ul>
         <div class="mainTop__download">
-          <a href="#">Скачать презентацию</a>      
-          </div>
+          <a href="#">Скачать презентацию</a>
+        </div>
       </div>
 
       <section class="home" id="home">
@@ -88,11 +88,19 @@
       </section>
 
       <section class="about" id="about">
-        <div class="about__marker sec-marker"></div>  
+        <div class="about__marker sec-marker"></div>
         <div class="about__title sec-title">О комплексе</div>
         <div class="aboutBlock">
-          <div class="about__text">«Grand Victoria» — это современный, стильный и  яркий  жилой  комплекс,  сочетающий  в  себе  комфорт, функциональность  и  красоту.  Высокий уровень жизни в ЖК «Grand Victoria» обеспечивается за счёт качества строительства,  продуманных  архитектурных  решений,  транспортной  доступности  и  развитой  инфраструктуры. Объект возводится  в  престижном  и  уютном  микрорайоне  столицы,  на  пересечении  улиц  С. Нурмагамбетова  и 
-            Ж. Нажимеденова,  в  непосредственной  близости  к  значимым  культурным  объектам  Нур-Султана.  Рядом  находятся мечеть  «Хазрет  Султан»,  Национальный  музей  Республики Казахстан,  Дворец творчества «Шабыт»,  Казахский Государственный академический музыкально-драматический театр им. К. Куанышбаева, монумент «Қазақ Елі». В шаговой доступности несколько государственных и частных школ и детских садов</div>
+          <div class="about__text">«Grand Victoria» — это современный, стильный и яркий жилой комплекс, сочетающий в
+            себе комфорт, функциональность и красоту. Высокий уровень жизни в ЖК «Grand Victoria» обеспечивается за счёт
+            качества строительства, продуманных архитектурных решений, транспортной доступности и развитой
+            инфраструктуры. Объект возводится в престижном и уютном микрорайоне столицы, на пересечении улиц С.
+            Нурмагамбетова и
+            Ж. Нажимеденова, в непосредственной близости к значимым культурным объектам Нур-Султана. Рядом находятся
+            мечеть «Хазрет Султан», Национальный музей Республики Казахстан, Дворец творчества «Шабыт», Казахский
+            Государственный академический музыкально-драматический театр им. К. Куанышбаева, монумент «Қазақ Елі». В
+            шаговой доступности несколько государственных и частных школ и детских садов
+          </div>
           <div class="about__infoList">
             <div class="info__item">
               <div class="info__item__num">4</div>
@@ -113,7 +121,7 @@
               <div class="info__item__num">2023 г.</div>
               <div class="info__item__name">сдача в эксплуатацию</div>
             </div>
-          </div>  
+          </div>
         </div>
       </section>
 
@@ -128,7 +136,8 @@
             <div class="item__content">
               <div class="item-title">Локация</div>
               <div class="item-text">
-                Жилой комплекс «Grand Victoria» расположен в самом сердце культурной жизни столицы. Не нужно далеко ехать, чтобы посетить мечеть, театр, музей или концертный зал – всё это в шаговой доступности.
+                Жилой комплекс «Grand Victoria» расположен в самом сердце культурной жизни столицы. Не нужно далеко
+                ехать, чтобы посетить мечеть, театр, музей или концертный зал – всё это в шаговой доступности.
               </div>
             </div>
           </div>
@@ -170,7 +179,7 @@
             <div class="menu__item" v-show="visible" @click="id=2">Безопасный двор</div>
           </div>
           <div class="infra__contentBlock" v-for="(item, index) in infra_content" :key="item.id">
-            <div class="infra__content__item" v-if="index == id">  
+            <div class="infra__content__item" v-if="index == id">
               <div class="content__text">{{ item.text }}</div>
               <div class="content__img">{{ item.img }}</div>
             </div>
@@ -180,18 +189,29 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="infra__content__item">Slide 1</div>
-              <div class="infra__content__item">Slide 2</div>
-              <div class="infra__content__item">Slide 3</div>
-              
+              <div class="swiper-slide">
+                <div class="infra__content__item">Slide 1</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="infra__content__item">Slide 2</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="infra__content__item">Slide 3</div>
+              </div>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
 
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
           </div>
         </div>
-      
-      
+
+
       </section>
     </main>
   </div>
@@ -199,32 +219,15 @@
 
 <script>
 import Swiper, {Navigation, Pagination} from 'swiper';
-
-const swiper = new Swiper('.swiper', {
-  spaceBetween: 30,
-  modules:[Navigation, Pagination],
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
-
-  //If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  },
-})
-
+import 'swiper/css';
 
 export default {
   name: 'App',
-  components: {
-  },
+  components: {},
   data: () => ({
     id: 0,
     visible: true,
+      swiper: '',
 
 
     first_column: [
@@ -237,7 +240,7 @@ export default {
       {
         title: 'Технология строительства',
         text: 'Проект возводится по уникальному методу индустриального строительства. Все изделия выпускаются в заводских условиях - ровные стены, готовые под оклейку обоями или покраску с проведеннымии каналами для электропроводки, трехслойные наружные фасады, отвечающие всем стандартам качества, безопасности и архитектурной эстетики. Учитывая климатические условия столицы от -40 до +40 ⁰С, изделия обладают повышенной энергоэффективностью и влагонепроницаемостью.',
-        photo_url: 'advantages2.jpg', 
+        photo_url: 'advantages2.jpg',
         alt: 'Стена дома в разрезе'
       },
       {
@@ -251,7 +254,7 @@ export default {
       {
         title: 'Идеальные планировки',
         text: 'В проекте предусмотрены квартиры различной комнатности от 44 до 117 квадратных метров. Компактные однушки станут отличным вариантом для тех, кто ещё не обзавёлся семьёй. Функциональные двухкомнатные квартиры подойдут молодым парам, а для семей с детьми запроектированы просторные трёхкомнатные и четырёхкомнатные квартиры с большими площадями',
-        photo_url: 'advantages4.jpg', 
+        photo_url: 'advantages4.jpg',
         alt: 'Радостная семья в квартире'
       },
       {
@@ -281,23 +284,48 @@ export default {
         text: 'text3',
         img: 'img3',
       }
-    ]  
+    ]
   }),
+
+  methods: {
+    initSwiper() {
+      this.swiper = new Swiper('.infraSwiper', {
+        spaceBetween: 30,
+        modules: [Navigation, Pagination],
+        // Optional parameters
+        direction: 'horizontal',
+
+        //If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+      })
+    }
+  },
+  mounted() {
+    this.initSwiper();
+  }
 }
 </script>
 
 <style lang="scss">
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
   color: #000;
 }
+
 .body {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', serif;
   font-style: normal;
 
   header {
@@ -309,18 +337,20 @@ a {
     z-index: 10;
     box-shadow: 2px 0px 6px rgba(91, 91, 91, 0.1);
     background-color: #FFFFFF;
-    
+
     .headerBlock {
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
+
     .header__logo {
       margin: 21px 44px 0;
       max-height: 117px;
-      max-width: 172px; 
+      max-width: 172px;
     }
+
     .header__nav {
       //margin-top: 48px;
       list-style-type: none;
@@ -331,11 +361,14 @@ a {
         font-size: 16px;
         line-height: 20px;
         padding-left: 30px;
+
         &:hover {
           font-weight: 500;
+
           a {
-            color:#E31E24;
+            color: #E31E24;
           }
+
           &:after {
             position: absolute;
             content: url(@/assets/litleLogo.svg);
@@ -343,11 +376,13 @@ a {
             left: 10px;
           }
         }
+
         &:not(:last-child) {
           margin-bottom: 10px;
         }
       }
     }
+
     .header__contacts {
       margin-bottom: 20px;
       margin-left: 35px;
@@ -355,7 +390,7 @@ a {
       .contacts__title {
         margin-bottom: 13px;
       }
-      
+
       .contacts__item {
         display: flex;
         align-items: flex-start;
@@ -368,17 +403,20 @@ a {
           line-height: 17px;
         }
       }
+
       .header__backCall {
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
         margin-bottom: 13px;
+
         &:hover {
           text-decoration-line: underline;
           text-decoration-color: #E31E24;
+
           a {
             color: #E31E24;
-          } 
+          }
         }
 
       }
@@ -397,6 +435,7 @@ a {
       line-height: 50px;
       text-transform: uppercase;
     }
+
     .sec-marker {
       width: 23px;
       height: 112px;
@@ -405,12 +444,12 @@ a {
       left: 0;
       background-color: #fff
     }
-  
+
     .mainTop {
       background-color: #FFFFFF;
       height: 40px;
       display: flex;
-      justify-content: space-between;  
+      justify-content: space-between;
       align-items: start;
       max-width: 1180px;
       margin-right: 15px;
@@ -427,46 +466,55 @@ a {
 
         .mainTop__item {
           margin-right: 40px;
+
           &:hover {
             border-bottom: 3px solid #E31E24;
           }
         }
       }
+
       .mainTop__download {
-          &:hover {
-            border-bottom: 3px solid #E31E24;
-          }
+        &:hover {
+          border-bottom: 3px solid #E31E24;
+        }
       }
     }
+
     .home {
       position: relative;
       margin-bottom: 86px;
 
-      .home__img {        
-        width: 100%;   
+      .home__img {
+        width: 100%;
         height: 100%;
         display: block;
       }
+
       .home__logo {
         position: absolute;
         z-index: 9;
       }
+
       .logo-one {
         top: 17%;
         left: 23%;
       }
+
       .logo-two {
         top: 4%;
         left: 48%;
       }
+
       .logo-three {
         top: 13%;
         left: 80%;
       }
+
       .logo-four {
         top: 42%;
         left: 60%;
       }
+
       .home__btn {
         cursor: pointer;
         border: 0;
@@ -479,6 +527,7 @@ a {
         font-weight: 700;
         font-size: 16px;
         line-height: 20px;
+
         &::before {
           position: absolute;
           content: url(@/assets/right.svg);
@@ -487,6 +536,7 @@ a {
         }
       }
     }
+
     .about {
       position: relative;
       margin-bottom: 96px;
@@ -494,6 +544,7 @@ a {
       .about__marker {
         background-color: #E31E24;
       }
+
       .aboutBlock {
         margin-left: 63px;
         margin-right: 88px;
@@ -504,6 +555,7 @@ a {
           font-size: 16px;
           line-height: 20px;
         }
+
         .about__infoList {
           margin-top: 32px;
           display: flex;
@@ -515,7 +567,7 @@ a {
             display: flex;
             flex-direction: column;
             align-items: center;
-        
+
             .info__item__num {
               font-weight: 600;
               font-size: 20px;
@@ -523,6 +575,7 @@ a {
               text-align: center;
               color: #E31E24;
             }
+
             .info__item__name {
               font-weight: 400;
               font-size: 20px;
@@ -530,6 +583,7 @@ a {
               text-align: center;
             }
           }
+
           .info_line {
             width: 1px;
             height: 51px;
@@ -538,6 +592,7 @@ a {
         }
       }
     }
+
     .advantages {
       position: relative;
 
@@ -550,12 +605,13 @@ a {
         margin-right: 88px;
 
         .item-title {
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 24px;
-            color: #000;
-            margin-bottom: 24px;
-          }
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          color: #000;
+          margin-bottom: 24px;
+        }
+
         .item-text {
           font-weight: 400;
           font-size: 16px;
@@ -566,17 +622,19 @@ a {
         .advantages__mainItem {
           margin-top: 36px;
           position: relative;
-          
-          .item__mainPhoto {        
-            img { 
-              display: block; 
-              width: 100%; 
+
+          .item__mainPhoto {
+            img {
+              display: block;
+              width: 100%;
             }
           }
+
           .item__content {
             margin-top: 24px;
             padding-left: 43px;
             position: relative;
+
             &::before {
               position: absolute;
               content: '';
@@ -587,6 +645,7 @@ a {
               top: -43px;
               left: 32px;
             }
+
             &::after {
               position: absolute;
               content: url(@/assets/litleLogo.svg);
@@ -595,7 +654,7 @@ a {
             }
           }
         }
-        
+
         .advantagesList {
           display: flex;
           flex-direction: row;
@@ -612,6 +671,7 @@ a {
                 margin-top: 24px;
                 padding-left: 78px;
                 position: relative;
+
                 &::before {
                   position: absolute;
                   content: '';
@@ -622,6 +682,7 @@ a {
                   top: -29px;
                   left: 66px;
                 }
+
                 &::after {
                   position: absolute;
                   content: url(@/assets/litleLogo.svg);
@@ -630,10 +691,12 @@ a {
                 }
               }
             }
-            
+
           }
+
           .advantages__secondColumn {
             max-width: 475px;
+
             .secondColumn__item {
               margin-bottom: 85px;
 
@@ -641,6 +704,7 @@ a {
                 margin-bottom: 24px;
                 padding-left: 78px;
                 position: relative;
+
                 &::before {
                   position: absolute;
                   content: '';
@@ -651,6 +715,7 @@ a {
                   top: 11px;
                   left: 66px;
                 }
+
                 &::after {
                   position: absolute;
                   content: url(@/assets/litleLogo.svg);
@@ -659,15 +724,14 @@ a {
                 }
               }
             }
-            
 
-            
+
           }
-          
+
 
         }
       }
-      
+
     }
 
     .infra {
@@ -676,6 +740,7 @@ a {
       .infra__marker {
         background-color: #E31E24;
       }
+
       .infraBlock {
         margin-left: 63px;
         margin-right: 88px;
@@ -691,11 +756,12 @@ a {
             padding-bottom: 16px;
             cursor: pointer;
           }
+
           .active {
             border-bottom: 2px solid #E31E24;
           }
         }
-        
+
         .infraSwiper {
           width: 1000px;
           height: 200px;
@@ -707,6 +773,7 @@ a {
             text-align: center;
             background: #fff;
           }
+
           .swiper-pagination-bullet {
             width: 20px;
             height: 20px;
