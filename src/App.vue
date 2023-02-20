@@ -313,6 +313,10 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import '@/font/BebasNeue/stylesheet.css';
+@import "@/font/Montserrat/stylesheet.css";
+
 * {
   margin: 0;
   padding: 0;
