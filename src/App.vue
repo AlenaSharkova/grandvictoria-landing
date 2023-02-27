@@ -80,6 +80,18 @@
 
       <section class="home" id="home">
         <img class="home__img" src="@/assets/groupHouses.jpg">
+        <div class="home__backlight backlight-top">
+          <img src="https://grandvictoria.kz/wp-content/uploads/2021/12/vector-6.svg">
+        </div>
+        <div class="home__backlight backlight-left">
+          <img src="https://grandvictoria.kz/wp-content/uploads/2021/12/vector-3.svg">
+        </div>
+        <div class="home__backlight backlight-bottom">
+          <img src="https://grandvictoria.kz/wp-content/uploads/2021/12/vector-1.svg">
+        </div>
+        <div class="home__backlight backlight-right">
+          <img src="https://grandvictoria.kz/wp-content/uploads/2021/12/vector-2.svg">
+        </div>
         <img class="home__logo logo-one" src="@/assets/logoHome.png">
         <img class="home__logo logo-two" src="@/assets/logoHome.png">
         <img class="home__logo logo-three" src="@/assets/logoHome.png">
@@ -942,10 +954,55 @@ a {
         width: 100%;
         height: 100%;
         display: block;
+        z-index: 0;
       }
+
+
+      .home__backlight {
+        position: absolute;
+        z-index: 8;
+        transition: all .3s ease;
+        opacity: 0;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .backlight-top {
+        top: 1%;
+        right: 36%;
+        width: 31.7%;
+      }
+      .backlight-left {
+        top: 11.5%;
+        left: 1.5%;
+        width: 43.7%;
+      }
+      .backlight-bottom {
+        bottom: 1%;
+        left: 31.4%;
+        width: 55.4%;
+      }
+      .backlight-right {
+        top: 9.5%;
+        right: 0.7%;
+        width: 38.6%;
+      }
+
       .home__logo {
         position: absolute;
         z-index: 9;
+        animation-name: jump_logo;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
       }
       .logo-one {
         top: 17%;
@@ -963,6 +1020,25 @@ a {
         top: 42%;
         left: 60%;
       }
+      
+      @keyframes  jump_logo {
+        0% {
+          transform: translateY(0%);
+        }
+        50% {
+          transform: translateY(21%);
+        }
+        80% {
+          transform: translateY(36%);
+        }
+        90% {
+          transform: translateY(18%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
       .home__btn {
         cursor: pointer;
         border: 0;
@@ -975,12 +1051,19 @@ a {
         font-weight: 700;
         font-size: 16px;
         line-height: 20px;
+        
+        &:hover {
+          &:before {
+            transform: translateX(20px);
+          }  
+        } 
 
         &::before {
           position: absolute;
           content: url(@/assets/right.svg);
-          top: 18px;
-          right: 23px;
+          transition: all .3s ease;
+          top: 20px;
+          right: 43px;
         }
       }
     }
